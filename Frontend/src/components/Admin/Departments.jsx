@@ -71,7 +71,8 @@ const Departments = () => {
       try {
         if (!user?.team) return;
         const res = await fetch(
-          `http://localhost:5000/api/departments?teamId=${
+          // `http://localhost:5000/api/departments?teamId=${
+          `https://teamsyncc-production.up.railway.app/api/departments?teamId=${
             user.team._id || user.team
           }`,
           { headers: { Authorization: `Bearer ${token}` } }
@@ -97,7 +98,8 @@ const Departments = () => {
     try {
       // Fetch tasks of that department
       const res = await fetch(
-        `http://localhost:5000/api/tasks/team/${user?.team?._id || user?.team}`,
+        // `http://localhost:5000/api/tasks/team/${user?.team?._id || user?.team}`,
+        `https://teamsyncc-production.up.railway.app/api/tasks/team/${user?.team?._id || user?.team}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       const allTasks = await res.json();
