@@ -14,7 +14,8 @@ const AdminLeaderboard = () => {
 
       try {
         const res = await fetch(
-          `http://localhost:5000/api/tasks/leaderboard?teamId=${user.team}`,
+          // `http://localhost:5000/api/tasks/leaderboard?teamId=${user.team}`,
+          `https://your-railway-app.up.railway.app/api/tasks/leaderboard?teamId=${user.team}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         if (!res.ok) throw new Error("Failed to fetch leaderboard");
