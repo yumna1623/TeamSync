@@ -14,7 +14,8 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login-passcode", {
+      // const res = await fetch("http://localhost:5000/api/auth/login-passcode", {
+      const res = await fetch("https://your-railway-app.up.railway.app/api/auth/login-passcode", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, passcode, password }),  // Include both passcode and password
