@@ -26,7 +26,7 @@ const AdminDashBoardPage = () => {
 
     try {
       // const res = await fetch("http://localhost:5000/api/team/admin-dashboard", {
-      const res = await fetch("https://your-railway-app.up.railway.app/api/team/admin-dashboard", {
+      const res = await fetch("https://teamsyncc-production.up.railway.app/api/team/admin-dashboard", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
