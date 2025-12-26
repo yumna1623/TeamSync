@@ -17,7 +17,8 @@ const { login, token } = useAuth();
     e.preventDefault();
 
     try {
-    const response = await fetch("http://localhost:5000/api/team/create", {
+    // const response = await fetch("http://localhost:5000/api/team/create", {
+    const response = await fetch("https://your-railway-app.up.railway.app/api/team/create", {
   method: "POST",
   headers: { 
     "Content-Type": "application/json",
