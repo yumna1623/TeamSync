@@ -40,7 +40,7 @@ const Departments = () => {
     try {
       setLoading(true);
       // const res = await fetch("http://localhost:5000/api/departments", {
-      const res = await fetch("https://your-railway-app.up.railway.app/api/departments", {
+      const res = await fetch("https://teamsyncc-production.up.railway.app/api/departments", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
