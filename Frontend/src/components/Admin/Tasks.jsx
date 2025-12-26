@@ -34,7 +34,7 @@ const Tasks = ({ onTaskCreated }) => {
         const token = localStorage.getItem("token");
         const res = await axios.get(
           // "http://localhost:5000/api/team/members",
-          "https://your-railway-app.up.railway.app/api/team/members",
+          "https://teamsyncc-production.up.railway.app/api/team/members",
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setMembers(res.data);
