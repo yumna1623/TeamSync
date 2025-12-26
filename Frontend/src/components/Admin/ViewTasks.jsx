@@ -45,7 +45,7 @@ const ViewTasks = () => {
   const handleDecision = async (taskId, decision) => {
     try {
       const res = await fetch(
-        `https://your-railway-app.up.railway.app/api/tasks/${taskId}/decision`,
+        `https://teamsyncc-production.up.railway.app/api/tasks/${taskId}/decision`,
         // `http://localhost:5000/api/tasks/${taskId}/decision`,
         {
           method: "PUT",
