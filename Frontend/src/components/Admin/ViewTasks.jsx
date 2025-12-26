@@ -23,7 +23,8 @@ const ViewTasks = () => {
         const teamId = user?.team?._id || user?.team;
 
         const res = await fetch(
-          `http://localhost:5000/api/tasks/team/${teamId}`,
+          // `http://localhost:5000/api/tasks/team/${teamId}`,
+          `https://your-railway-app.up.railway.app/api/tasks/team/${teamId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
 
