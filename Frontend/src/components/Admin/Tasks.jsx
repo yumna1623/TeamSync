@@ -54,7 +54,8 @@ const Tasks = ({ onTaskCreated }) => {
         if (!teamId) return;
 
         const res = await axios.get(
-          `http://localhost:5000/api/departments?teamId=${teamId}`,
+          `https://teamsyncc-production.up.railway.app/api/departments?teamId=${teamId}`,
+          // `http://localhost:5000/api/departments?teamId=${teamId}`,
           { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
         );
         setDepartments(res.data);
@@ -70,7 +71,8 @@ const Tasks = ({ onTaskCreated }) => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/tasks",
+        // "http://localhost:5000/api/tasks",
+        "https://teamsyncc-production.up.railway.app/api/tasks",
         task,
         { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
       );
