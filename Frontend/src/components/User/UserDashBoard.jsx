@@ -22,7 +22,7 @@ const UserDashboard = () => {
           return;
         }
 
-        const res = await fetch("http://localhost:5000/api/team/user-dashboard", {
+        const res = await fetch("https://teamsyncc-production.up.railway.app/api/team/user-dashboard", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
