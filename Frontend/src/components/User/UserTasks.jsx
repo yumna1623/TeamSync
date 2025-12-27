@@ -13,7 +13,7 @@ const UserTasks = ({ newTask }) => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/tasks/my", {
+        const res = await axios.get("https://teamsyncc-production.up.railway.app/api/tasks/my", {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
         setTasks(res.data);
@@ -73,7 +73,7 @@ const UserTasks = ({ newTask }) => {
   const handleUpdateStatus = async (id, newStatus) => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/tasks/${id}`,
+        `https://teamsyncc-production.up.railway.app/api/tasks/${id}`,
         { status: newStatus },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
