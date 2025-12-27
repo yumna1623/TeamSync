@@ -12,7 +12,7 @@ const UserLeaderboard = () => {
       if (!token) return;
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:5000/api/tasks/leaderboard", {
+        const res = await fetch("https://teamsyncc-production.up.railway.app/api/tasks/leaderboard", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!res.ok) throw new Error("Failed to fetch leaderboard");
