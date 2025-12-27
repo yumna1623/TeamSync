@@ -15,7 +15,7 @@ const { login } = useAuth(); // ✅
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:5000/api/team/join", {
+      const res = await fetch("https://teamsyncc-production.up.railway.app/api/team/join", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password, passcode }),
