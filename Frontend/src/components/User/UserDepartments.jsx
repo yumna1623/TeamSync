@@ -33,7 +33,7 @@ const UserDepartments = () => {
       try {
         if (!user?.team) return;
         const res = await fetch(
-          `http://localhost:5000/api/departments?teamId=${user.team}`,
+          `https://teamsyncc-production.up.railway.app/api/departments?teamId=${user.team}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
