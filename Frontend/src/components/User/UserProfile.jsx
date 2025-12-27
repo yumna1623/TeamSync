@@ -104,7 +104,7 @@ const getDayColor = (date) => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/tasks/my", {
+        const res = await axios.get("https://teamsyncc-production.up.railway.app/api/tasks/my", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setTasks(Array.isArray(res.data) ? res.data : []);
@@ -123,7 +123,7 @@ const getDayColor = (date) => {
   const handleUpdateStatus = async (id, newStatus) => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/tasks/${id}/status`,
+        `https://teamsyncc-production.up.railway.app/api/tasks/${id}/status`,
         { status: newStatus },
         { headers: { Authorization: `Bearer ${token}` } }
       );
